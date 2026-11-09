@@ -18,6 +18,54 @@
 @media(max-width:800px){.wrap{width:min(100% - 30px,1350px)}nav{height:72px}.brand img{width:55px;height:44px}.brand-name{font-size:1.35rem}.menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:72px;padding:24px;background:var(--deep);flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{text-align:center;padding:10px}.hero,.hero-inner{min-height:630px}.hero-media{background-image:linear-gradient(90deg,rgba(2,30,28,.98),rgba(2,30,28,.75)),url('ostendai-hero-concept.jpg');background-position:68% center}.hero-copy{width:100%;padding:60px 0}.hero-kicker{gap:12px}.trustgrid{grid-template-columns:repeat(2,1fr)}.trustitem:nth-child(2):after{display:none}.intro,.approach-head{grid-template-columns:1fr;display:grid;gap:28px}.purpose-copy{padding:65px 25px}.principles{grid-template-columns:repeat(2,1fr)}.contact-box{align-items:flex-start;flex-direction:column}.foot{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){h1{font-size:3.4rem}.section{padding:75px 0}.services,.steps{grid-template-columns:1fr}.service{min-height:0}.step{padding:28px 0;border-right:0;border-bottom:1px solid var(--line)}.purpose-image{min-height:285px}.trustitem{padding:20px 8px}.trustitem strong{font-size:1.45rem}.trustitem span{font-size:.58rem}.hero-actions{align-items:flex-start;flex-direction:column}.brand-name{letter-spacing:.1em}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.service{transition:none}}
+.contact-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.contact-actions{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.btn-secondary{
+    background:transparent;
+    color:var(--gold2) !important;
+    border:1px solid rgba(216,189,131,.5);
+    padding:14px 24px;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    font-size:.71rem;
+    font-weight:800;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    transition:.25s;
+}
+
+.btn-secondary:hover{
+    background:rgba(216,189,131,.08);
+    border-color:var(--gold2);
+}
+
+@media(max-width:800px){
+    .contact-actions{
+        width:100%;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .contact-actions .btn,
+    .contact-actions .btn-secondary{
+        width:100%;
+    }
+}
 </style>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,7 +80,57 @@
 <section class="section" id="services"><div class="wrap"><div class="intro"><div><div class="eyebrow">What we do <span class="gold-line"></span></div><h2>Solutions for a more resilient organization.</h2></div><p>OSTENDAI brings structure to ambiguity. We connect business goals, technology decisions, and delivery discipline so teams can move forward with confidence.</p></div><div class="services"><article class="service"><div class="ico">Ⅰ</div><h3>Strategic planning</h3><p>Turn vision into focused roadmaps, priorities, and practical next steps.</p><a href="#contact">Learn more →</a></article><article class="service"><div class="ico">Ⅱ</div><h3>Project execution</h3><p>Direct complex initiatives with transparent governance and dependable follow-through.</p><a href="#contact">Learn more →</a></article><article class="service"><div class="ico">Ⅲ</div><h3>Innovation &amp; technology</h3><p>Evaluate opportunities and introduce solutions that create durable value.</p><a href="#contact">Learn more →</a></article><article class="service"><div class="ico">Ⅳ</div><h3>People &amp; operations</h3><p>Align teams, processes, and decisions around the outcomes that matter most.</p><a href="#contact">Learn more →</a></article></div></div></section>
 <section class="purpose" id="purpose"><div class="purpose-grid"><div class="purpose-image" role="img" aria-label="Close detail of an eagle inspired by the OSTENDAI brand identity"></div><div class="purpose-copy"><div class="eyebrow light">Our purpose <span class="gold-line"></span></div><h2>A higher standard in everything we do.</h2><p>Progress is built on trust, disciplined execution, and a clear view of what comes next. OSTENDAI helps leaders move from uncertainty to action without losing sight of the people and purpose behind the work.</p><div class="principles"><span>Trust</span><span>Quality</span><span>Innovation</span><span>Built to last</span></div></div></div></section>
 <section class="section approach" id="approach"><div class="wrap"><div class="approach-head"><div><div class="eyebrow">Our approach <span class="gold-line"></span></div><h2>From complexity to confident action.</h2></div><p>Every engagement is designed to create alignment early, reduce delivery risk, and leave the organization stronger than we found it.</p></div><div class="steps"><article class="step"><div class="step-num">01</div><h3>Understand</h3><p>Clarify the challenge, desired outcomes, constraints, and decision landscape.</p></article><article class="step"><div class="step-num">02</div><h3>Align</h3><p>Build shared direction across stakeholders, priorities, and measures of success.</p></article><article class="step"><div class="step-num">03</div><h3>Deliver</h3><p>Move the work forward with disciplined planning, transparency, and accountability.</p></article><article class="step"><div class="step-num">04</div><h3>Strengthen</h3><p>Transfer knowledge, improve capability, and establish a durable path forward.</p></article></div></div></section>
-<section class="contact" id="contact"><div class="wrap contact-box"><div><div class="eyebrow light">Start the conversation</div><h2>Let's build what comes next.</h2><p>Tell us what you are working through. We will help clarify the opportunity and identify a practical path forward.</p></div><a class="btn" href="mailto:info@ostendai.com">info@ostendai.com <span>→</span></a></div></section>
+<!-- <section class="cta-section" id="contact">
+    <div class="container">
+        <div class="cta-content">
+
+            <span class="section-badge">
+                Strategic Consultation
+            </span>
+
+            <h2>Let's Build What Comes Next.</h2>
+
+            <p>
+                Every organization faces unique challenges. Whether you need AI
+                strategy, IT project leadership, systems modernization, or expert
+                guidance on your next initiative, we're ready to help you move
+                forward with confidence.
+            </p>
+
+            <div class="cta-actions">
+
+                <a href="mailto:your@email.com"
+                   class="btn btn-primary">
+                    Send a Message
+                </a>
+
+                <a href="https://calendly.com/austinmoran-ostendai"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-outline">
+                    Book a Consultation
+                </a>
+
+            </div>
+
+            <div class="cta-trust-line">
+                No obligation. Just practical guidance and a conversation about your goals.
+            </div>
+
+        </div>
+    </div>
+</section> -->
+<section class="contact" id="contact">
+    <div class="wrap contact-box"><div>
+        <div class="eyebrow light">Start the conversation</div>
+        <h2>Let's build what comes next.</h2>
+        <p>  Every organization faces unique challenges. Whether you need AI
+                strategy, IT project leadership, systems modernization, or expert
+                guidance on your next initiative, we're ready to help you move
+                forward with confidence.</p></div>
+        <a class="btn" href="https://calendly.com/austinmoran-ostendai">Book a Consultation <span>→</span></a>
+        <a class="btn" href="mailto:info@ostendai.com">info@ostendai.com <span>→</span></a></div></section>
+
 </main><footer><div class="wrap foot"><div class="foot-brand"><img src="ostendai-eagle-gold.png" alt=""><span>OSTENDAI</span></div><small>© <span id="year"></span> OSTENDAI LLC. ALL RIGHTS RESERVED.</small></div></footer>
 <script>const m=document.querySelector('.menu'),l=document.querySelector('.links');m.addEventListener('click',()=>{const o=l.classList.toggle('open');m.setAttribute('aria-expanded',String(o));m.textContent=o?'×':'☰'});document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');m.setAttribute('aria-expanded','false');m.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body></html>
